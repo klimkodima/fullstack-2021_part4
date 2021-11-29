@@ -1,0 +1,18 @@
+GET http://localhost:3001/api/people/1
+
+###
+PUT http://localhost:3001/api/person/61a13ce497438522a75a1c5a HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Darjana",
+    "number": "234455661"
+}
+
+###
+GET http://localhost:3001/info
+
+###
+GET http://localhost:3001/api/people/61a13ce497438522a75a1c5a
+
+
