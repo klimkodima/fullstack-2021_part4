@@ -2,17 +2,20 @@ const mongoose = require('mongoose')
 
 const blogSchema = new mongoose.Schema({
   title: { type: String, minlength: 10, required: [true, 'Title required'] },
-  author: { type: String, minlength: 3, required: [true, 'Author required'], unique: true },
-  url: String,
+  author: { type: String, minlength: 3, required: [true, 'Author required'] },
+  url: { type: String, minlength: 3, required: [true, 'URL required'], unique: true },
   likes:{
-    type: String,
+    type: Number,
     validate: {
       validator: function (v) {
         return /^\d{0,10}$/.test(v)
       },
       message: props => `${props.value} is not a valid like. It  is requaired from 0 to 10 numbers !`
-    },
-    required: [true, 'Like required']
+    }
+  },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   }
 }, {
   versionKey: false,
@@ -27,4 +30,5 @@ blogSchema.set('toJSON', {
   }
 })
 
-module.exports = mongoose.model('Blog', blogSchema)
+const Blog = mongoose.model('Blog', blogSchema)
+module.exports = Blog
