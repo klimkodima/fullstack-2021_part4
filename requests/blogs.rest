@@ -17,3 +17,16 @@ authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imhlb
 ###
 DELETE  http://localhost:3003/api/blogs/61abe15cc39aa16f9a217f1c
 authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGxhczIiLCJpZCI6IjYxYWE4OGJhMzBjYjRlNDEzMTdmZTk3ZCIsImlhdCI6MTYzODY0ODA3Nn0.BtFXw7Vwl2-8FWY2jpedvHthk47mC-MwIHuqnJeJaFE
+
+###
+ PUT http://localhost:3003/api/blogs/61b20e764c24b9197bfa9aa6
+content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGxhczIiLCJpZCI6IjYxYWE4OGJhMzBjYjRlNDEzMTdmZTk3ZCIsImlhdCI6MTYzODY0ODA3Nn0.BtFXw7Vwl2-8FWY2jpedvHthk47mC-MwIHuqnJeJaFE
+
+{
+  "title": "Mary Poppendieck blog 12",
+  "author": "Mary Poppendieck5",
+  "url": "/mary_poppendieck/12",
+  "likes": 6,
+  "userId": "61aa88ba30cb4e41317fe97d"
+}

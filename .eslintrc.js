@@ -6,6 +6,10 @@ module.exports = {
     'jest': true
   },
   'extends': 'eslint:recommended',
+  'globals': {
+    'Atomics': 'readonly',
+    'SharedArrayBuffer': 'readonly'
+  },
   'parserOptions': {
     'ecmaVersion': 12
   },

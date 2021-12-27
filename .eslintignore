@@ -3,9 +3,4 @@ node_modules
 .vscode
 .git
 public
-build
-node_modules
-.vscode
-.git
-public
 .eslintrc.js
